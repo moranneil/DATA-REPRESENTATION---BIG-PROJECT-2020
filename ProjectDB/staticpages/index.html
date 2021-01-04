@@ -1,0 +1,300 @@
+<html>
+
+<head>
+    <title>Cars</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div id="create-update" style="display:none">
+        <h2>Create-Update</h2>
+        <table id="createUpdateForm" class="table">
+            <tr>
+                <td>Reg</td>
+                <td><input type="text" name="reg" id="regInput"></td>
+            </tr>
+            <tr>
+                <td>Manu Code</td>
+                <td><input type="text" name="manu_code"></td>
+            </tr>
+            <tr>
+                <td>Mileage</td>
+                <td><input type="text" name="mileage"></td>
+            </tr>
+            <tr>
+                <td>Price</td>
+                <td><input type="currency" name="price"></td>
+            </tr>
+            <tr>
+                <td>Colour</td>
+                <td><input type="text" name="colour"></td>
+            </tr>
+            <tr>
+                <td>Fuel</td>
+                <td><input type="text" name="fuel"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button id="create-button" onClick="doCreate()">Create</button>
+                    <button id="update-button" onClick="doUpdate()">Update</button>
+                </td>
+            </tr>
+
+
+        </table>
+
+        <h2>Instructions</h2>
+        <b>Reg:</b> Enter alphanumeric string without spaces for example 211-MO-234 or even 211-MO-SAM<br><br>
+        <b>Manu Code:</b> Enter one of five three letter manufacturer codes from list below:<br>
+        <div style="text-indent: 1em;">TOY = Toyota<br></div>
+        <div style="text-indent: 1em;">FOR = Ford<br></div>
+        <div style="text-indent: 1em;">VOL = Volkswagon<br></div>
+        <div style="text-indent: 1em;">NIS = Nissan<br></div>
+        <div style="text-indent: 1em;">GM = General Motors<br></div><br>
+        <b>Mileage:</b> Enter any number for mileage<br><br>
+        <b>Price:</b> Enter any number for price<br><br>
+        <b>Colour:</b> Enter any string colour<br><br>
+        <b>Fuel:</b> Enter either <b>diesel</b> or <b>petrol</b> for fuel<br><br>
+
+
+
+        <br> </div>
+
+    <div id="display" style="display:block">
+        <h2>Vehicles</h2>
+        <button onClick="showCreate()">Create</button>
+        <table id="vehicleTable" class="table">
+            <tr>
+                <th>Reg</th>
+                <th>Manu Code</th>
+                <th>Mileage</th>
+                <th>Price</th>
+                <th>Colour</th>
+                <th>Fuel</th>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        function showCreate() {
+            document.getElementById('display').style.display = "none"
+            document.getElementById('update-button').style.display = "none"
+            document.getElementById('update-button').style.display = "block"
+            document.getElementById('create-update').style.display = "block"
+        }
+
+        function showUpdate(thisElem) {
+            var rowElement = thisElem.parentNode.parentNode;
+            // var index = rowElement.rowIndex;
+
+            vehicle = readVehicleFromRow(rowElement)
+            populateForm(vehicle)
+
+
+            document.getElementById('display').style.display = "none"
+            document.getElementById('update-button').style.display = "block"
+            document.getElementById('create-button').style.display = "none"
+            document.getElementById('create-update').style.display = "block"
+        }
+
+        function readVehicleFromRow(rowElement) {
+            vehicle = {}
+            vehicle.reg = rowElement.getAttribute("reg");
+            vehicle.manu_code = rowElement.cells[1].firstChild.textContent
+            vehicle.mileage = rowElement.cells[2].firstChild.textContent
+            vehicle.price = rowElement.cells[3].firstChild.textContent
+            vehicle.colour = rowElement.cells[4].firstChild.textContent
+            vehicle.fuel = rowElement.cells[5].firstChild.textContent
+
+            return vehicle
+        }
+
+        function populateForm(vehicle) {
+            var form = document.getElementById('createUpdateForm')
+
+            form.querySelector('input[name="reg"]').value = vehicle.reg
+            form.querySelector('input[name="reg"]').disabled = true
+            form.querySelector('input[name="manu_code"]').value = vehicle.manu_code
+            form.querySelector('input[name="mileage"]').value = vehicle.mileage
+            form.querySelector('input[name="price"]').value = vehicle.price
+            form.querySelector('input[name="colour"]').value = vehicle.colour
+            form.querySelector('input[name="fuel"]').value = vehicle.fuel
+        }
+
+        function clearForm() {
+            var form = document.getElementById('createUpdateForm')
+
+            form.querySelector('input[name="reg"]').value = ''
+            form.querySelector('input[name="reg"]').disabled = false
+            form.querySelector('input[name="manu_code"]').value = ''
+            form.querySelector('input[name="mileage"]').value = ''
+            form.querySelector('input[name="price"]').value = ''
+            form.querySelector('input[name="colour"]').value = ''
+            form.querySelector('input[name="fuel"]').value = ''
+        }
+
+
+        function doCreate() {
+            console.log("In doCreate!!!")
+            vehicle = getVehicleFromForm()
+                // console.log("BACK in doCreate(), the vehicle value is: " + vehicle)
+            vehicleJSON = JSON.stringify(vehicle)
+
+
+            console.log("BEFORE AJAX CALL")
+            console.log("VALUE of VehicleJSON is: " + vehicleJSON)
+            $.ajax({
+                url: "/vehicle",
+                data: JSON.stringify(vehicle),
+                method: "POST",
+                dataType: "JSON",
+                contentType: "application/json; charset=utf-8",
+                success: function(result) {
+                    addVehicleToTable(vehicle)
+                    console.log("SUCCESS == addVehicleToTable(vehicle) == is DONE: " + result)
+                    showDisplay()
+                    clearForm()
+                },
+                error: function(xhr, status, error) {
+                    console.log("error " + error)
+                }
+            })
+
+        }
+
+        function doUpdate() {
+            vehicle = getVehicleFromForm()
+            updateServer(vehicle)
+                // updateTableRow(vehicle) Had to remove this because cells mapping woud not work in function updateTableRow
+            showDisplay()
+            clearForm()
+        }
+
+        function updateServer(vehicle) {
+            $.ajax({
+                url: "/vehicle/" + vehicle.reg,
+                data: JSON.stringify(vehicle),
+                method: "PUT",
+                dataType: "JSON",
+                contentType: "application/json; charset=utf-8",
+                success: function(result) {
+                    console.log(result)
+                        // updateTableRow(vehicle)
+                    showDisplay()
+                    clearForm()
+                },
+                error: function(xhr, status, error) {
+                    console.log("error " + error)
+                }
+            })
+        }
+
+        function doDelete(thisElem) {
+            var tableElement = document.getElementById('vehicleTable');
+            var rowElement = thisElem.parentNode.parentNode;
+            var index = rowElement.rowIndex;
+            reg = rowElement.getAttribute("reg");
+            $.ajax({
+                url: "/vehicle/" + reg,
+                method: "DELETE",
+                dataType: "JSON",
+                success: function(result) {
+                    tableElement.deleteRow(index);
+                },
+                error: function(xhr, status, error) {
+                    console.log("error " + error + " code:" + status)
+                }
+            })
+        }
+
+        function updateTableRow(vehicle) {
+            console.log("IN updateTableRow, The CONTENTS OF VEHICLE ARE: " + vehicle)
+            rowElement = document.getElementById(vehicle.reg)
+            console.log("vehicle.reg is: " + vehicle.reg)
+            rowElement.cells[1].textContent = vehicle.manu_code
+            console.log("vehicle.manu_code is: " + vehicle.manu_code)
+            rowElement.cells[2].firstChild.textContent = vehicle.mileage
+            rowElement.cells[3].firstChild.textContent = vehicle.price
+            rowElement.cells[4].firstChild.textContent = vehicle.colour
+            rowElement.cells[5].firstChild.textContent = vehicle.fuel
+            console.log("Updating Table")
+        }
+
+        function getVehicleFromForm() {
+            var form = document.getElementById('createUpdateForm')
+            var vehicle = {}
+                // console.log("IN getVehicleFromForm() ")
+            vehicle.reg = form.querySelector('input[name="reg"]').value
+                // console.log("The VEHICLE REG IS: " + vehicle.reg)
+            vehicle.manu_code = form.querySelector('input[name="manu_code"]').value
+            console.log("The VEHICLE MANU_CODE IS: " + vehicle.manu_code)
+            vehicle.mileage = form.querySelector('input[name="mileage"]').value
+            vehicle.price = form.querySelector('input[name="price"]').value
+            vehicle.colour = form.querySelector('input[name="colour"]').value
+            vehicle.fuel = form.querySelector('input[name="fuel"]').value
+
+            console.log("The Vehicle is: " + vehicle)
+
+            console.log("The Vehicle is NOW ADDED to the TABLE: " + vehicle)
+            return (vehicle)
+        }
+
+        function showDisplay() {
+            document.getElementById('display').style.display = "block"
+            document.getElementById('create-update').style.display = "none"
+        }
+
+        function populateTable() {
+            //AJAX call to server to getALL vehicles
+            $.ajax({
+                url: 'http://127.0.0.1:5000/vehicle',
+                method: 'GET',
+                datatype: 'JSON',
+                success: function(results) {
+                    for (vehicle of results) {
+                        for (var i = 0; i < vehicle.length; i++) {
+                            addVehicleToTable(vehicle[i])
+                        }
+
+
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.log("error " + error + " code:" + status)
+                }
+            })
+        }
+
+        function addVehicleToTable(vehicle) {
+            // console.log("Working!!!)
+            tableElem = document.getElementById("vehicleTable")
+            rowElem = tableElem.insertRow(-1)
+            rowElem.setAttribute("reg", vehicle.reg)
+            console.log("THE VEHICLE REG IS: " + vehicle.reg)
+            cell1 = rowElem.insertCell(0)
+            cell1.innerHTML = vehicle.reg
+            cell2 = rowElem.insertCell(1)
+            cell2.innerHTML = vehicle.manu_code
+            cell3 = rowElem.insertCell(2)
+            cell3.innerHTML = vehicle.mileage
+            cell4 = rowElem.insertCell(3)
+            cell4.innerHTML = vehicle.price
+            cell5 = rowElem.insertCell(4)
+            cell5.innerHTML = vehicle.colour
+            cell6 = rowElem.insertCell(5)
+            cell6.innerHTML = vehicle.fuel
+            cell7 = rowElem.insertCell(6)
+            cell7.innerHTML = '<button onclick="showUpdate(this)">Update</button>'
+            cell8 = rowElem.insertCell(7)
+            cell8.innerHTML = '<button onclick="doDelete(this)">Delete</button>'
+        }
+        populateTable()
+    </script>
+</body>
+
+</html>

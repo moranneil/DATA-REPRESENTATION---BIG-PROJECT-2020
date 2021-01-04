@@ -1,14 +1,15 @@
 import mysql.connector
+import dbconfig as cfg
 
 class VehicleDAO:
     db = ""
     def __init__(self):
         self.db = mysql.connector.connect(
-            host = 'localhost',
-            user = 'root',
-            password = 'root',
-            auth_plugin="mysql_native_password",
-            database="garage"
+            host = cfg.mysql['host'],
+            user = cfg.mysql['username'],
+            password = cfg.mysql['password'],
+            auth_plugin = cfg.mysql['auth_plugin'],
+            database = cfg.mysql['database']
         )
     
     print("connection made")

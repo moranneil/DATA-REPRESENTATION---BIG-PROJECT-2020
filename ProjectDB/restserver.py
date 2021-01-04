@@ -39,7 +39,7 @@ def create():
     # return "served by Create "
 
 #update
-# curl -X PUT -d "{\"Title\":\"new Title\", \"Price\":999}" -H "content-type:application/json" http://127.0.0.1:5000/books/1
+# curl -X PUT -d "{\"manu_code\":\"FOR\", \"mileage\":23000, \"price\":1250.00, \"colour\":\"pink\", \"fuel\":\"petrol\"}" -H Content-Type:application/json http://127.0.0.1:5000/vehicle/2003-LM-201
 @app.route('/vehicle/<string:reg>', methods=['PUT'])
 def update(reg):
     foundVehicle = vehicleDAO.findByReg(reg)
@@ -64,7 +64,7 @@ def update(reg):
     return jsonify(currentVehicle)
 
 #delete
-# curl -X DELETE http://127.0.0.1:5000/books/1
+# curl -X DELETE http://127.0.0.1:5000/vehicle/2009-RN-12
 @app.route('/vehicle/<string:reg>', methods=['DELETE'])
 def delete(reg):
     vehicleDAO.delete(reg)
