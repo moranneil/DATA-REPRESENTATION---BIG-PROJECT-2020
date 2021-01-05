@@ -44,11 +44,11 @@ The tables in the database garage_g00376338 are given below
 
 The primary key of the manufacturer table manu_code is a foreign key in the vehicle table. see image below.
 
-<img src="Images/showcreatetablevehicle.JPG" alt="Table vehicle details" width="250">
+<img src="Images/showcreatetablevehicle.JPG" alt="Table vehicle details" width="300">
 
 Finally the current entries in the vehicle table are given below.
 
-<img src="Images/showtablevehicle.JPG" alt="Current Table vehicle data" width="250">
+<img src="Images/showtablevehicle.JPG" alt="Current Table vehicle data" width="400">
 
 ## Web Application Running Procedure
 
