@@ -27,6 +27,8 @@ This project is the final project for Data Representation and Querying module. I
   * **Web Application Running Procedure** - This sections provides the running procedure for the Web Application
   * **Web Interface User Procedure** - This section provides screenshots of the Web Application performing CRUD operations on the Database
 
+<br>
+
 ## Database Detail and Importing the Database
 
 The database can be imported in to MySQL or equivalent from the two sql files in the **garage_g00376338/** folder. The database has been given a unique name to ensure that it can be imported to another machine for testing. The database details are given below
@@ -50,6 +52,8 @@ Finally the current entries in the **vehicle** table are given below.
 
 <img src="Images/showtablevehicle.JPG" alt="Current Table vehicle data" width="500">
 
+<br>
+
 ## Web Application Running Procedure
 
 To start the application perform the following steps.
@@ -67,5 +71,7 @@ To start the application perform the following steps.
 ![Image](Images/runrestserver.JPG "Run restserver.py")
 
 The Web application is now ready to perform CRUD operations on the database
+
+<br>
 
 ## Web Interface User Procedure 
