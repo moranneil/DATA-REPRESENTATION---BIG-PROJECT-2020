@@ -87,7 +87,7 @@ The following CRUD operations are described in this section
 
 <br>
 
-### READ - Starting Web Application and Reading in the Data.
+#### READ - Starting Web Application and Reading in the Data.
 
 To start the Web application browse to the following url http://127.0.0.1:5000/index.html (Assuming flask server is at default port 5000 on local machine). See image below all vehicles are listed from the **vehicle** table in **garage_g00376338** DB
 
@@ -95,13 +95,13 @@ To start the Web application browse to the following url http://127.0.0.1:5000/i
 
 <br>
 
-### CREATE - Creating a new entry in the Database.
+#### CREATE - Creating a new entry in the Database.
 
 <br>
 
-### UPDATE - Updating an existing entry in the Database
+#### UPDATE - Updating an existing entry in the Database
 
 <br>
 
-### DELETE - Deleting an entry in the Database
+#### DELETE - Deleting an entry in the Database
 
