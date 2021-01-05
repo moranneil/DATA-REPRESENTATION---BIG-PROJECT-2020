@@ -21,15 +21,20 @@ This project is the final project for Data Representation and Querying module. I
   * /staticpages/index.html - This is the HTML/JS code that the browser runs to send HTTP requests via Flash rest server 
   * /garage_g00376338/ - This is the DB Import Files Folder containing two DB tables for importing
 
-## Database Detail
+## Database Detail and Importing the Database
 
-The database can be imported in to mySQL or equivlent from the garage_g00376338/ folder. The database has been given a unique name to ensure that it can be imported to another machine for testing. The database details are given below
+The database can be imported in to MySQL or equivalent from the two sql files in the garage_g00376338/ folder. The database has been given a unique name to ensure that it can be imported to another machine for testing. The database details are given below
 
 * Database Name: garage_g00376338
 * Tables in DB: vehicle & manufacturer
 
-See image of database detail
+See image of database garage_g00376338 detail
 
 ![Image](Images/showdatabases.JPG "DB garage_g00376338")
+
+The tables in the database garage_g00376338 are given below
+
+![Image](Images/showtables.JPG "DB garage_g00376338")
+
 
 The primary key of the manufacturer table manu_code is a foreign key in the vehicle table. see image below.
