@@ -36,7 +36,7 @@ The database can be imported in to MySQL or equivalent from the two sql files in
 
 See image of database garage_g00376338 detail
 
-![Image](Images/showdatabases.JPG "DB garage_g00376338")
+![Image](Images/showdatabases.JPG "DB garage_g00376338" =100)
 
 The tables in the database garage_g00376338 are given below
 
@@ -57,7 +57,7 @@ To start the application perform the following steps.
 
 1. From cmder of equivalent run the python config program dbconfigTemplate.py in the example below dbconfig.py is run
 
-![Image](Images/rundbconfig.JPG "Run dbconfig.py" | width=100)
+![Image](Images/rundbconfig.JPG "Run dbconfig.py")
 
 2. Run Data Access Object python program vehicleDAO.py 
 
