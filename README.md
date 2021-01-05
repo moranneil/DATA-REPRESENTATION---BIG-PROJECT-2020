@@ -105,7 +105,7 @@ A filled out form is given below
 
 <img src="Images/createnewentryfilledform.JPG" alt="Create New Entry Filled Form" width="800">
 
-To enter the new entry click the button **Create** and the new entry is entered in the database and the page is refreshed to show the newly entered vehicle. See below
+To enter the new entry click the button **Create** and the new entry is entered in the database and the page is changed to show the newly entered vehicle. See below
 
 <img src="Images/newentry.JPG" alt="New Entry in DB" width="800">
 
