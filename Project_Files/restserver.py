@@ -6,7 +6,7 @@ app = Flask(__name__, static_url_path='', static_folder='staticpages')
 
 @app.route('/')
 def index():
-    return "hello"
+    return "This is working!!!"
 #get all
 
 @app.route('/vehicle')
@@ -18,7 +18,7 @@ def getAll():
 def findByReg(reg):
     return jsonify(vehicleDAO.findByReg(reg))
 
-# create
+# Create and test POST CURL below
 # curl -X POST -d "{\"reg\":\"08MO1234\", \"manu_code\":\"FOR\", \"mileage\":23000, \"price\":1250.00, \"colour\":\"pink\", \"fuel\":\"petrol\"}" -H Content-Type:application/json http://127.0.0.1:5000/vehicle
 @app.route('/vehicle', methods=['POST'])
 def create():
@@ -38,7 +38,7 @@ def create():
 
     # return "served by Create "
 
-#update
+# Update and test PUT CURL below
 # curl -X PUT -d "{\"manu_code\":\"FOR\", \"mileage\":23000, \"price\":1250.00, \"colour\":\"pink\", \"fuel\":\"petrol\"}" -H Content-Type:application/json http://127.0.0.1:5000/vehicle/2003-LM-201
 @app.route('/vehicle/<string:reg>', methods=['PUT'])
 def update(reg):
@@ -63,7 +63,7 @@ def update(reg):
     vehicleDAO.update(currentVehicle)
     return jsonify(currentVehicle)
 
-#delete
+# Delete and test DELETE CURL below
 # curl -X DELETE http://127.0.0.1:5000/vehicle/2009-RN-12
 @app.route('/vehicle/<string:reg>', methods=['DELETE'])
 def delete(reg):
