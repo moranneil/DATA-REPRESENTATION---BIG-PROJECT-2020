@@ -36,6 +36,8 @@ The database can be imported in to MySQL or equivalent from the two sql files in
 
 See image of database garage_g00376338 detail
 
+<img src="Images/showdatabases.JPG" width="50">
+
 ![Image](Images/showdatabases.JPG "DB garage_g00376338")
 
 The tables in the database garage_g00376338 are given below
