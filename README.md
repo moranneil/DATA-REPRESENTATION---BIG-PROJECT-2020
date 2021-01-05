@@ -133,7 +133,7 @@ When the **Update** button is pressed the page returns to the display table refr
 
 #### DELETE - Deleting an entry in the Database
 
-To delete an entry from the server press the **Delete** button beside the entry you wish to delete. The newly created and updated entry is deleted. The screenshot below highlighs the button to press.
+To delete an entry from the server press the **Delete** button beside the entry you wish to delete. The newly created and updated entry is deleted. The screenshot below highlights the button to press.
 
 <img src="Images/Deletebutton.JPG" alt="Delete button" width="800">
 
