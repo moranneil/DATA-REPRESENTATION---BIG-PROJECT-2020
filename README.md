@@ -2,12 +2,14 @@
 
 ![Image](Images/bigprojectlogo.JPG "Image")
 
-#### Course: HD in Data Analytics
-#### Module: Data Representation and Querying
-#### Module ID: 52957
-#### Student Name: Neil Moran
-#### Student ID: G00376338
+##### Course: HD in Data Analytics
+##### Module: Data Representation and Querying
+##### Module ID: 52957
+##### Student Name: Neil Moran
+##### Student ID: G00376338
+
 <br>
+
 ## Overview
 
 This project 
