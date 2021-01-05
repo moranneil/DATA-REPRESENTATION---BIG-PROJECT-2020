@@ -36,22 +36,22 @@ The database can be imported in to MySQL or equivalent from the two sql files in
 
 See image of database garage_g00376338 detail
 
-<img src="Images/showdatabases.JPG" alt="DB garage_g00376338" width="200">
-
-![Image](Images/showdatabases.JPG "DB garage_g00376338")
+<img src="Images/showdatabases.JPG" alt="DB garage_g00376338" width="250">
 
 The tables in the database garage_g00376338 are given below
 
 ![Image](Images/showtables.JPG "Tables in garage_g00376338")
-
+<img src="Images/showtables.JPG" alt="Tables in garage_g00376338" width="250">
 
 The primary key of the manufacturer table manu_code is a foreign key in the vehicle table. see image below.
 
 ![Image](Images/showcreatetablevehicle.JPG "Table vehicle details")
+<img src="Images/showcreatetablevehicle.JPG" alt="Table vehicle details" width="250">
 
 Finally the current entries in the vehicle table are given below.
 
 ![Image](Images/showtablevehicle.JPG "Current Table vehicle data")
+<img src="Images/showtablevehicle.JPG" alt="Current Table vehicle data" width="250">
 
 ## Web Application Running Procedure
 
