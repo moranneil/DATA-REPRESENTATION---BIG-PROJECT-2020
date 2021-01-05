@@ -38,3 +38,6 @@ The tables in the database garage_g00376338 are given below
 
 
 The primary key of the manufacturer table manu_code is a foreign key in the vehicle table. see image below.
+
+![Image](Images/showcreatetablevehicle.JPG "DB garage_g00376338")
+
