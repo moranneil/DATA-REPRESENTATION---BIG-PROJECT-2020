@@ -78,7 +78,7 @@ The Web application is now ready to perform CRUD operations on the database
 
 ## Web Interface User Procedure 
 
-To start the Web application browse to the following url http://127.0.0.1:5000/index.html (Assuming flask server is at default port 5000 on local machine). See image below
+To start the Web application browse to the following url http://127.0.0.1:5000/index.html (Assuming flask server is at default port 5000 on local machine). See image below all vehicles are listed from the **vehicle** table in **garage_g00376338** DB
 
 <img src="Images/restservergetall.JPG" alt="Get all info from DB" width="800">
 
