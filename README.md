@@ -20,7 +20,9 @@ This project is the final project for Data Representation and Querying module. I
   * **restserver.py** - This is the Flask python program that maps https requests to individual functions
   * **/staticpages/index.html** - This is the HTML/JS code that the browser runs to send HTTP requests via Flash rest server 
   * **/garage_g00376338/** - This is the DB Import Files Folder containing two DB tables for importing
-  
+ 
+ <br>
+ 
   The sections below will describe the following parts of the project
   
   * **Database Detail and Importing the Database** - This will describe the DB details and tables that the Web application is designed to perform CRUD operations.
