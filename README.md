@@ -57,7 +57,7 @@ To start the application perform the following steps.
 
 1. From cmder of equivalent run the python config program dbconfigTemplate.py in the example below dbconfig.py is run
 
-![Image](Images/rundbconfig.JPG "Run dbconfig.py")
+![Image](Images/rundbconfig.JPG "Run dbconfig.py" | width=100)
 
 2. Run Data Access Object python program vehicleDAO.py 
 
