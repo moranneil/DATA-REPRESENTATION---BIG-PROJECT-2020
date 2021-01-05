@@ -34,19 +34,19 @@ The database can be imported in to MySQL or equivalent from the two sql files in
 * Database Name: **garage_g00376338**
 * Tables in DB: **vehicle & manufacturer**
 
-See image of database garage_g00376338 detail
+See image of database **garage_g00376338** detail
 
 <img src="Images/showdatabases.JPG" alt="DB garage_g00376338" width="250">
 
-The tables in the database garage_g00376338 are given below
+The tables in the database **garage_g00376338** are given below
 
 <img src="Images/showtables.JPG" alt="Tables in garage_g00376338" width="250">
 
-The primary key of the manufacturer table manu_code is a foreign key in the vehicle table. see image below.
+The primary key of the **manufacturer** table manu_code is a foreign key in the **vehicle** table. see image below.
 
 <img src="Images/showcreatetablevehicle.JPG" alt="Table vehicle details" width="300">
 
-Finally the current entries in the vehicle table are given below.
+Finally the current entries in the **vehicle** table are given below.
 
 <img src="Images/showtablevehicle.JPG" alt="Current Table vehicle data" width="500">
 
