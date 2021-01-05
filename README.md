@@ -77,3 +77,31 @@ The Web application is now ready to perform CRUD operations on the database
 <br>
 
 ## Web Interface User Procedure 
+
+The following CRUD operations are described in this section
+
+* **READ** - The data from table **vehicle** is accessed and displayed using a GET html request when the main page url http://127.0.0.1:5000/index.html is accessed through the Flask server. 
+* **CREATE** - An entry is created when the button Create is pressed, the form is displayed to enter the vehicle details along with the Instructions on what to enter in each field on the form. When the button Create is pressed an AJAX call is made with the POST method to enter the JSON data to the database via the Python DAO.
+* **UPDATE** - To Update an existing entry in the DB press Update button beside any vehicle. This populates a form with the existing details each detail can be changed except the reg which is the primary key. When the details on the form are changed press Update and an AJAX call using method PUT to modify the database via the Python DAO. The page has to be refreshed again to see the modified data
+* **DELETE** - To delete an database entry simply press teh delete button beside the entry you wish to remove and an AJAX call is made with the DELETE method via the Python DAO.
+
+<br>
+
+#### READ - Starting Web Application and Reading in the Data.
+
+To start the Web application browse to the following url http://127.0.0.1:5000/index.html (Assuming flask server is at default port 5000 on local machine). See image below all vehicles are listed from the **vehicle** table in **garage_g00376338** DB
+
+<img src="Images/restservergetall.JPG" alt="Get all info from DB" width="800">
+
+<br>
+
+#### CREATE - Creating a new entry in the Database.
+
+<br>
+
+#### UPDATE - Updating an existing entry in the Database
+
+<br>
+
+#### DELETE - Deleting an entry in the Database
+
