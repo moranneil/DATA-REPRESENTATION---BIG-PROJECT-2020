@@ -15,7 +15,7 @@
 
 This project is the final project for Data Representation and Querying module. It is a Web Application that performs CRUD operations to a table in an SQL database. The project consists of the following files and folders:
 
-  * dbconfigTemplate.py - This is Database connection detail as used in the dbconfig.py file
+  * **dbconfigTemplate.py** - This is Database connection detail as used in the dbconfig.py file
   * vehicleDAO.py - This is the Data Access Object python file to connect to the MySQL database
   * restserver.py - This is the Flask python program that maps https requests to individual functions
   * /staticpages/index.html - This is the HTML/JS code that the browser runs to send HTTP requests via Flash rest server 
