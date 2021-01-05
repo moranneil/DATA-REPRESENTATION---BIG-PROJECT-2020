@@ -105,13 +105,29 @@ A filled out form is given below
 
 <img src="Images/createnewentryfilledform.JPG" alt="Create New Entry Filled Form" width="800">
 
-To enter the new entry click the button **Create** and the new entry is entered in the database and the page is refreshed to show the newly entered vehicle. See below
+To enter the new entry click the button **Create** and the new entry is entered in the database and the page is changed to show the newly entered vehicle. See below
 
 <img src="Images/newentry.JPG" alt="New Entry in DB" width="800">
 
 <br>
 
 #### UPDATE - Updating an existing entry in the Database
+
+To Update an entry in the Database select the **Update** button beside the entry you wish to update. The newly created entry in the previous section is used.
+
+<img src="Images/updatestart.JPG" alt="Update Button" width="800">
+
+The details of the entry to be updated are loaded in to the update form. The Reg field cannot be edited.
+
+<img src="Images/updateformstart.JPG" alt="Update Form Start" width="800">
+
+Change the required fields according to the Instructions provided on the page.
+
+<img src="Images/updateformcomplete.JPG" alt="Update Form complete" width="800">
+
+When the **Update** button is pressed the page returns to the display table refresh the page to get the updated details from the server
+
+<img src="Images/updatemainpage.JPG" alt="Update Form complete" width="800">
 
 <br>
 
