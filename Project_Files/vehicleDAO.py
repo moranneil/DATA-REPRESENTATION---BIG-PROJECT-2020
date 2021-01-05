@@ -1,5 +1,5 @@
 import mysql.connector
-import dbconfig as cfg
+import dbconfig as cfg #Import DB configuration connection data from dbconfig.py
 
 class VehicleDAO:
     db = ""
@@ -11,8 +11,9 @@ class VehicleDAO:
             auth_plugin = cfg.mysql['auth_plugin'],
             database = cfg.mysql['database']
         )
-    
-    print("connection made")
+    print("\n==========================================")
+    print(f"Connection to MySQL DB:{cfg.mysql['database']} OK")
+    print("==========================================\n")
 
     def create(self, vehicle):
         cursor = self.db.cursor()
