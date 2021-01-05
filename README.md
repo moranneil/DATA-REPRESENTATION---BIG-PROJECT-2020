@@ -40,17 +40,14 @@ See image of database garage_g00376338 detail
 
 The tables in the database garage_g00376338 are given below
 
-![Image](Images/showtables.JPG "Tables in garage_g00376338")
 <img src="Images/showtables.JPG" alt="Tables in garage_g00376338" width="250">
 
 The primary key of the manufacturer table manu_code is a foreign key in the vehicle table. see image below.
 
-![Image](Images/showcreatetablevehicle.JPG "Table vehicle details")
 <img src="Images/showcreatetablevehicle.JPG" alt="Table vehicle details" width="250">
 
 Finally the current entries in the vehicle table are given below.
 
-![Image](Images/showtablevehicle.JPG "Current Table vehicle data")
 <img src="Images/showtablevehicle.JPG" alt="Current Table vehicle data" width="250">
 
 ## Web Application Running Procedure
