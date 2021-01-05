@@ -30,6 +30,6 @@ The database can be imported in to mySQL or equivlent from the garage_g00376338/
 
 See image of database detail
 
-![Image](Images/garage_g00376338.JPG "DB garage_g00376338")
+![Image](Images/showdatabases.JPG "DB garage_g00376338")
 
 The primary key of the manufacturer table manu_code is a foreign key in the vehicle table. see image below.
