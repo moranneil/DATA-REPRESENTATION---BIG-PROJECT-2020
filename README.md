@@ -11,8 +11,12 @@
 
 <br>
 
-## Overview
+## Introduction
 
-This project 
+This project is the final project for Data Representation and Querying module. It is a Web Application that performs CRUD operations to a table in an SQL database. The project consists of the following files:
+
+  * dbconfigTemplate.py
+  * vehicleDAO.py
+  * restserver.py
 
 ## Problem Statement
