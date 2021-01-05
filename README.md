@@ -67,4 +67,6 @@ To start the application perform the following steps.
 
 ![Image](Images/runrestserver.JPG "Run restserver.py")
 
+The Web application is now ready to perform CRUD operations on the database
+
 ## Web Interface User Procedure 
