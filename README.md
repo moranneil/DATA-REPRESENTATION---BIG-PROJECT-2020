@@ -97,6 +97,18 @@ To start the Web application browse to the following url http://127.0.0.1:5000/i
 
 #### CREATE - Creating a new entry in the Database.
 
+To create a new entry in the databse press the **Create** from the main page above. The following page along with Instructions is displayed.
+
+<img src="Images/createnewentry.JPG" alt="Create New Entry Blank Form" width="800">
+
+A filled out form is given below
+
+<img src="Images/createnewentryfilledform.JPG" alt="Create New Entry Filled Form" width="800">
+
+To enter the new entry click the button **Create** and the new entry is entered in the database and the page is refreshed to show the newly entered vehicle. See below
+
+<img src="Images/newentry.JPG" alt="New Entry in DB" width="800">
+
 <br>
 
 #### UPDATE - Updating an existing entry in the Database
