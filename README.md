@@ -48,7 +48,7 @@ The primary key of the manufacturer table manu_code is a foreign key in the vehi
 
 Finally the current entries in the vehicle table are given below.
 
-<img src="Images/showtablevehicle.JPG" alt="Current Table vehicle data" width="400">
+<img src="Images/showtablevehicle.JPG" alt="Current Table vehicle data" width="500">
 
 ## Web Application Running Procedure
 
