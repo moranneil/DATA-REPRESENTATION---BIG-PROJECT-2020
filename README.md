@@ -41,3 +41,7 @@ The primary key of the manufacturer table manu_code is a foreign key in the vehi
 
 ![Image](Images/showcreatetablevehicle.JPG "DB garage_g00376338")
 
+Finally the current entries in the vehicle table are given below.
+
+![Image](Images/showtablevehicle.JPG "DB garage_g00376338")
+
